@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test HTML </title>
+</head>
+<body>
+    <p>Base : </p>
+    <input type="text" name="" id="inputBase">
+    <p>Height : </p>
+    <input type="text" name="" id="inputHeight">
+    <button id="calc-btn">Calculate</button>
+
+    <div>
+        <h1>Area Calculation</h1>
+        <div id="calculationField">
+            hello
+        </div>
+    </div>
+    <script>
+        document.getElementById('calc-btn').addEventListener('click',function(){
+            const baseValue = document.getElementById('inputBase').value;
+            const base = parseFloat(baseValue);
+            const heightValue = document.getElementById('inputHeight').value;
+            const height = parseFloat(heightValue);
+            console.log(height)
+            console.log(typeof height)
+            console.log(base)
+            console.log(typeof base)
+            const areaTrigonometry = 0.5 * base * height;
+            console.log(areaTrigonometry)
+            para.innerText = 'The Area of Triangle : ' + areaTrigonometry;
+        calField.appendChild(para);
+        })
+
+        const calField = document.getElementById('calculationField');
+        const para = document.createElement('p');
+       
+
+    </script>
+</body>
+</html>
