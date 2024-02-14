@@ -36,7 +36,7 @@
                             <input id="inputHeight" type="text" class="bg-gray-200 w-10 rounded-md"> <span>cm</span>
                         </div>
                         <div class="card-actions justify-center">
-                            <button id="tri-cal-btn" class="btn btn-primary">Calculate</button>
+                            <button id="tri-cal-btn" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
 
@@ -44,7 +44,7 @@
                 <!-- Rectangle Card -->
                 <div class="card border-2 border-gray-400 p-4">
                     <figure class="w-full">
-                        <img class="w-full" src="images/rectangle.png" alt="">
+                        <img class="w-full mt-4" src="images/rectangle.png" alt="">
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title flex justify-center">Rectangle</h2>
@@ -54,7 +54,7 @@
                             <input id="lengthValue" type="text" class="bg-gray-200 w-10 rounded-md"> <span>cm</span>
                         </div>
                         <div class="card-actions justify-center">
-                            <button id="rec-cal-btn" class="btn btn-primary">Calculate</button>
+                            <button id="rec-cal-btn" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
 
@@ -62,17 +62,17 @@
                 <!-- Parallelogram Card -->
                 <div class="card border-2 border-gray-400 p-4">
                     <figure class="w-full">
-                        <img class="w-full" src="images/parallelogram.png" alt="">
+                        <img class="w-full mt-4" src="images/parallelogram.png" alt="">
                     </figure>
                     <div class="card-body">
-                        <h2 class="card-title flex justify-center">Triangle</h2>
-                        <p>Area (A) = 0.5 X b X h</p>
+                        <h2 class="card-title flex justify-center">Parallelogram</h2>
+                        <p>Area (A) = b X h</p>
                         <div class="flex justify-around">
-                            <input type="text" class="bg-gray-200 w-10 rounded-md"> <span>cm</span>
-                            <input type="text" class="bg-gray-200 w-10 rounded-md"> <span>cm</span>
+                            <input id="parallelogram-base" type="text" class="bg-gray-200 w-10 rounded-md"> <span>cm</span>
+                            <input id="parallelogram-height" type="text" class="bg-gray-200 w-10 rounded-md"> <span>cm</span>
                         </div>
                         <div class="card-actions justify-center">
-                            <button class="btn btn-primary">Calculate</button>
+                            <button id="parallelogram-btn" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
 
@@ -144,5 +144,6 @@
     </main>
     <script src="scripts/triangle-calculate.js"></script>
     <script src="scripts/rectangle.js"></script>
+    <script src="scripts/parallelogram.js"></script>
   </body>
 </html>
