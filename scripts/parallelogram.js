@@ -5,35 +5,25 @@
  * 4. Show the result in Area calculation section
 */
 
-// 1
-function addEventListenerToTheBtn(btnId, inputId1, inputId2){
-    const btn = document.getElementById(btnId).addEventListener('click',function(){
-        alert('i am clicked')
+//1
+function calculateTheAreaOfParallelogram(){
+const base = getValueFromInputById('parallelogram-base');
+const height = getValueFromInputById('parallelogram-height');
+const area = base * height;
+setAreaValueToAreaCalculationSection('areaCalculationContainer',area);
 
-        //2
-        function getValueFromInput(inputId){
-            const inputValue = parseFloat(document.getElementById(inputId).value);
-            console.log(inputValue);
-        }
-        const input1 = getValueFromInput(inputId1);
-        const input2 = getValueFromInput(inputId2);
-    })
 }
-addEventListenerToTheBtn('parallelogram-btn', 'parallelogram-base', 'parallelogram-height');
 
-//2
 
-// const recBtn = document.getElementById('rec-cal-btn');
-// recBtn.addEventListener('click', function (){
-//     const widthValue = document.getElementById('widthValue').value;
-//     const width = parseFloat(widthValue);
-//     const lengthValue = document.getElementById('lengthValue').value;
-//     const length = parseFloat(lengthValue);
-//     const rectangleArea = width * length;
-//     // console.log(rectangleArea)
-//     const areaCalculationContainer = document.getElementById('areaCalculationContainer');
-//     const para = document.createElement('p');
-//     para.innerText = 'The area of the rectangle is : ' + rectangleArea + ' cm^2';
-//     areaCalculationContainer.appendChild(para);
-// })
+// automatingFunctions
+function getValueFromInputById(fieldId){
+ const value = parseFloat(document.getElementById(fieldId).value);
+ return value;
+}
+function setAreaValueToAreaCalculationSection(areaId, area){
+    const areaCalculationContainer = document.getElementById(areaId);
+    const para = document.createElement('p');
+    para.innerText = 'The Area is : ' + area + 'cm^2';
+    areaCalculationContainer.appendChild(para);
+}
 
